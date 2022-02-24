@@ -10,11 +10,11 @@ pool:
   vmImage: windows-latest
 
 steps:
-- task:DotNetCoreCLI@2
+- task: DotNetCoreCLI@2
   displayName: Restore
   inputs:
-   commands:restore
-   projects:'*.csproj'
+   command: restore
+   projects: '*.csproj'
 
 - task:DotNetCoreCLI@2
   displayName: build
